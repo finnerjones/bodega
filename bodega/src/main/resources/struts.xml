@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<!-- Based on example http://www.roseindia.net/struts/struts2/struts-2-hello-world-files.shtml -->
+<struts>
+	<!-- TODO: Change the default XHTML markup to CSS markup -->
+	<constant name="struts.custom.i18n.resources" value="bodegai18n" />
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="true" />
+
+	<package name="bodega" extends="struts-default">
+		
+		<action name="TestConnection" class="com.finnerjones.bodega.core.struts.actions.ForwardToTestConnectionServletAction">
+			<result>/TestConnectionServlet</result>
+		</action>
+		
+		<action name="strutsBodega" >
+			<result>/struts/struts-index.jsp</result>
+		</action>
+		
+		<action name="allProducts" class="com.finnerjones.bodega.core.struts.actions.AllProductsAction">
+			<result name="success">/struts/allProducts.jsp</result>
+		</action>
+		
+		<action name="addOrEditProduct" class="com.finnerjones.bodega.core.struts.actions.AddOrEditProductAction">
+			<result>/struts/addOrEditProduct.jsp</result>
+		</action>
+		
+		<action name="deleteProduct" class="com.finnerjones.bodega.core.struts.actions.DeleteProductAction">
+			<result name="success">/struts/allProducts.jsp</result>
+		</action>
+		
+		<action name="saveProduct" class="com.finnerjones.bodega.core.struts.actions.SaveProductAction">
+			<result name="input">/struts/addOrEditProduct.jsp</result>
+			<result name="success" type="redirectAction">
+				<param name="actionName">allProducts</param>
+			</result>
+		</action>
+
+	</package>
+
+
+	<package name="default" namespace="/" extends="struts-default">
+		<action name="locale" class="com.finnerjones.bodega.core.struts.actions.LocaleAction">
+			<result name="success">struts/struts-index.jsp</result>
+		</action>
+	</package>
+
+</struts>

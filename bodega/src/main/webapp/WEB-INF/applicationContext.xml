@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+
+	<bean id="bodegaService" class="com.finnerjones.bodega.services.BodegaServiceImpl" /> 
+	
+	<bean id="addOrEditProductAction" class="com.finnerjones.bodega.core.struts.actions.AddOrEditProductAction">
+		<property name="bodegaService" ref="bodegaService" />
+	</bean>
+
+
+	<bean id="saveProductAction" class="com.finnerjones.bodega.core.struts.actions.SaveProductAction">
+		<property name="bodegaService" ref="bodegaService" />
+	</bean>
+
+	<bean id="deleteProductAction" class="com.finnerjones.bodega.core.struts.actions.DeleteProductAction">
+		<property name="bodegaService" ref="bodegaService" />
+	</bean>
+
+	<bean id="allProductsAction" class="com.finnerjones.bodega.core.struts.actions.AllProductsAction">
+		<property name="bodegaService" ref="bodegaService" />
+	</bean>
+
+</beans>

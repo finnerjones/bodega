@@ -1,0 +1,35 @@
+MySQL: (Using MySQL Workbench GUI)
+Connect to MySql from MySql bin on command line:
+mysql -u root -p
+enter password: root
+
+Admin:
+root/root
+
+Bodega DB user
+EJB Entities
+
+
+
+JPA persistence.xml URLS
+I wanted to put 2 persistence units in ONE persistence.xml
+and be able to run unit tests and deploy to server with same XML file
+- Programmatically had to load persistence context for tests, and used Maven to ignore 
+  the src/main/webapp/persistence.xml when running tests. Not great solution. 
+
+JPA - Hibernate - Spring
+http://icoloma.blogspot.com/2006/11/jpa-and-spring-fucking-cooltm_26.html
+http://www.zabada.com/tutorials/hibernate-and-jpa-with-spring-example
+http://blog.springsource.com/2006/05/30/getting-started-with-jpa-in-spring-20/
+http://forum.springsource.org/showthread.php?101816-Configuring-entityManagerFactory-for-Spring-Hibernate-EJB
+http://blog.xebia.com/2009/03/jpa-implementation-patterns-saving-detached-entities/
+http://java.dzone.com/articles/jpa-implementation-patterns
+http://weblogs.java.net/blog/ss141213/archive/2005/12/dont_use_persis.html
+
+
+Subversion Install
+http://svn.spears.at/
+http://www.codinghorror.com/blog/2008/04/setting-up-subversion-on-windows.html
+
+
+

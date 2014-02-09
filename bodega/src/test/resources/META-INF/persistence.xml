@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" 
+	xmlns="http://java.sun.com/xml/ns/persistence" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence 
+		http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+		
+	<persistence-unit name="BODEGA-TEST" transaction-type="RESOURCE_LOCAL">
+	
+		<!-- Commented provider while using container default provider (JBoss6 / Hibernate) -->
+		<!-- hibernate-jpa provider -->
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>com.finnerjones.bodega.persistence.entities.Product</class>
+		<class>com.finnerjones.bodega.persistence.entities.ProductType</class>
+		<class>com.finnerjones.bodega.persistence.entities.Year</class>		
+	
+	
+		<!--  jta-data-source>JPA-PocDS</jta-data-source -->
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />  
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />  
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/bodega" />  
+            <property name="hibernate.connection.username" value="bodega" />  
+            <property name="hibernate.connection.password" value="bodega" />  
+            <property name="current_session_context_class" value="thread"/> 
+            <property name="hibernate.show_sql" value="true"/> 
+		</properties>
+		
+		
+	</persistence-unit>
+</persistence>

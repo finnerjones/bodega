@@ -1,0 +1,144 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  	<modelVersion>4.0.0</modelVersion>
+  	<groupId>com.finnerjones</groupId>
+  	<artifactId>bodega</artifactId>
+  	<version>2.0</version>
+  	<description>Bodega</description>
+  	<packaging>war</packaging>
+  
+  
+	
+  	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.0.2</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+  
+  
+  	<properties>
+  		<servlet-api.version>2.5</servlet-api.version>
+  		<javaee-api.version>5.0-3</javaee-api.version>
+  		<commons-logging.version>1.1.1</commons-logging.version>
+  		<spring-test.version>2.5</spring-test.version>
+  		<spring.version>2.5</spring.version>
+  		<junit.version>4.8.1</junit.version>
+  		<apache.commons.dbcp.version>1.4</apache.commons.dbcp.version>
+  		<hibernate.version>3.3.2.GA</hibernate.version>
+  		<hibernate-jpa2-api.version>1.0.1.Final</hibernate-jpa2-api.version>
+  		<hibernate-entitymanager.version>3.6.5.Final</hibernate-entitymanager.version>
+  		<javassist.version>3.8.0.GA</javassist.version>
+  		<mysql-connector-java.version>5.1.17</mysql-connector-java.version>
+  		<struts2-core.version>2.2.1</struts2-core.version>
+  		<log4j.version>1.2.14</log4j.version>
+  		<struts2-spring-plugin>2.2.1</struts2-spring-plugin>
+  	</properties>
+
+  	<dependencies>
+  		<dependency>
+      		<groupId>junit</groupId>
+     		<artifactId>junit</artifactId>
+      		<version>${junit.version}</version>
+      		<scope>test</scope>
+    	</dependency>
+  		<dependency>
+  			<groupId>org.hibernate.javax.persistence</groupId>
+  			<artifactId>hibernate-jpa-2.0-api</artifactId>
+  			<version>${hibernate-jpa2-api.version}</version>
+  			<type>jar</type>
+  			<scope>test</scope>
+  		</dependency>
+  		<dependency>
+  			<groupId>org.hibernate</groupId>
+  			<artifactId>hibernate-entitymanager</artifactId>
+  			<version>${hibernate-entitymanager.version}</version>
+  			<type>jar</type>
+  			<scope>provided</scope>
+  		</dependency>
+  		<dependency>
+  			<groupId>mysql</groupId>
+  			<artifactId>mysql-connector-java</artifactId>
+  			<version>${mysql-connector-java.version}</version>
+  			<type>jar</type>
+  			<scope>provided</scope>
+  		</dependency>
+  		<dependency>
+  			<groupId>commons-logging</groupId>
+  			<artifactId>commons-logging</artifactId>
+  			<version>${commons-logging.version}</version>
+  			<type>jar</type>
+  			<scope>provided</scope>
+  		</dependency>
+  		<dependency>
+  			<groupId>org.springframework</groupId>
+  			<artifactId>spring-test</artifactId>
+  			<version>${spring-test.version}</version>
+  			<type>jar</type>
+  			<scope>test</scope>
+  		</dependency>
+  		<dependency>
+  			<groupId>org.springframework</groupId>
+  			<artifactId>spring</artifactId>
+  			<version>${spring.version}</version>
+  			<type>jar</type>
+  			<scope>compile</scope>
+  		</dependency>
+		 
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-spring-plugin</artifactId>
+			<version>${struts2-spring-plugin}</version>
+		</dependency>
+
+  		<dependency>
+  			<groupId>javax.servlet</groupId>
+  			<artifactId>servlet-api</artifactId>
+  			<version>${servlet-api.version}</version>
+  			<type>jar</type>
+  			<scope>provided</scope>
+  		</dependency>
+  		<dependency>
+  			<groupId>org.apache.openejb</groupId>
+  			<artifactId>javaee-api</artifactId>
+  			<version>${javaee-api.version}</version>
+  			<type>jar</type>
+  			<scope>provided</scope>
+  		</dependency>
+  		<dependency>
+  			<groupId>javassist</groupId>
+  			<artifactId>javassist</artifactId>
+  			<version>${javassist.version}</version>
+  			<type>jar</type>
+  			<scope>compile</scope>
+  		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+  		
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-core</artifactId>
+			<version>${struts2-core.version}</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.jgeppert.struts2.jquery</groupId>
+			<artifactId>struts2-jquery-plugin</artifactId>
+			<version>${struts2-core.version}</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+  	</dependencies>
+  
+
+</project>

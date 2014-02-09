@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE validators PUBLIC
+"-//OpenSymphony Group//XWork Validator 1.0.2// EN"
+"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+<validators>
+	<field name="product.productName">
+		<field-validator type="requiredstring">
+			<message>Product Name cannot be empty.</message>
+		</field-validator>
+	</field>
+	<field name="product.productType">
+		<field-validator type="required">
+			<message>Product Type must be specified.</message>
+		</field-validator>
+	</field>
+	<field name="product.productCountry">
+		<field-validator type="requiredstring">
+			<message>Product Country cannot be empty.</message>
+		</field-validator>
+	</field>
+	<field name="product.productDatePurchased">
+		<field-validator  type="regex" >
+			<param name="expression">(0?[1-9]|[12][0-9]|3[01])\.(0?[1-9]|1[012])\.((19|20)\d\d)</param>
+			<message>Product Date Purchased must be a valid date (dd.mm.yyyy).</message>
+		</field-validator>
+	</field>
+	<field name="product.productDateOpened"  >
+		<field-validator type="regex"> 
+			<param name="expression">(0?[1-9]|[12][0-9]|3[01])\.(0?[1-9]|1[012])\.((19|20)\d\d)</param>
+			<message>Product Date Opened must be a valid date (dd.mm.yyyy).</message>
+		</field-validator>
+	</field>
+
+</validators>

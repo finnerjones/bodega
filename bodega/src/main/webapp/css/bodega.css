@@ -1,0 +1,64 @@
+
+body {
+	text-align: left;
+}
+
+tr.logo {
+	background-color: #FFFFFF;
+}
+
+
+tr.list-header {
+    background-color: #E86850;
+}
+
+tr.odd {
+	background-color: #DDDDDD;
+}
+
+tr.even {
+	background-color: #EEEEDD;
+}
+
+table.products {
+	border:2px solid #a1a1a1;
+	padding:5px 20px; 
+	background:#dddddd;
+	border-radius:25px;
+}
+
+	
+
+a.edit {
+    background-image:url(/css/edit.jpg);
+    display:block;
+    height:48px;
+    width:48px;
+}
+
+
+#banner {
+	width: 300px ;
+ 	margin-left: auto ;
+ 	margin-right: auto ;
+}
+
+#addProduct {
+	width: 100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#list {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: auto;
+}
+
+#edit {
+	border:2px solid #a1a1a1;
+	padding:5px 20px; 
+	background:#dddddd;
+	border-radius:25px;
+}
